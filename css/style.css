@@ -21,4 +21,23 @@ body{
     width: 294px;
     height: 100vh;
     background-color: white;
+    display: flex;
+    justify-content: center;
+    padding-top: 65px;
+    color: #6256e6;
+    font-family: Shabnam;
+    font-weight: bold;
 }
+
+.time{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+}
+
+.date{
+    font-size: 14px;
+}
+
