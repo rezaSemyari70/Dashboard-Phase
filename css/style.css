@@ -23,10 +23,18 @@ body{
     background-color: white;
     display: flex;
     justify-content: center;
+    flex-direction: column;
     padding-top: 65px;
     color: #6256e6;
     font-family: Shabnam;
     font-weight: bold;
+}
+
+.dateAndTime{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .time{
@@ -40,4 +48,6 @@ body{
 .date{
     font-size: 14px;
 }
+
+
 
