@@ -15,6 +15,13 @@ body{
     height: 100%;
     background-color: #f5f5f5;
     direction: rtl;
+    
+}
+
+main{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
 }
 
 .dashboard{
@@ -35,7 +42,7 @@ body{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding-top: 40px;
+    padding-top: 5vh;
 }
 
 .time{
@@ -161,7 +168,9 @@ body{
     content: "\f013"; 
 }
 
-
+.fa-comment-alt:before {
+    content: "\f27a"; 
+}
     
 .dashboardBox{
     width: 10vw;
@@ -240,6 +249,27 @@ ul{
     font-size: 8px;
     /* margin-right: 40px; */
 }
+
+.reports{
+    width: 85vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-top: 18px;
+    padding-right: 18px;
+    padding-left: 18px;
+
+}
+
+.reportUserCount , .ticketCount , .encyclopediaCount , .newsCount{
+    width: 270px;
+    height: 90px;
+    background-color: yellowgreen;
+    border-radius: 4px;
+    
+}
+
+
 
 
 
