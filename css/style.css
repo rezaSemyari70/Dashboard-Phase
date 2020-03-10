@@ -39,11 +39,12 @@ body{
 }
 
 .time{
+    font-weight: bolder;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    font-size: 27px;
+    font-size: 25px;
 }
 
 .date{
@@ -145,14 +146,21 @@ body{
 }
 
 .fa-book:before {
-    content: "\f02d"; }
+    content: "\f02d"; 
+}
 
 .fa-ticket-alt:before {
     content: "\f3ff"; 
 }
 
 .fa-newspaper:before {
-    content: "\f1ea"; }
+    content: "\f1ea"; 
+}
+
+.fa-cog:before {
+    content: "\f013"; 
+}
+
 
     
 .dashboardBox{
@@ -198,7 +206,7 @@ ul{
     transform: rotate(-90deg);
     width: 8px;
     height: 6px;
-    /* margin-right: 80px; */
+    
 }
 
 .listItem{
