@@ -9,10 +9,11 @@
         <title>Dashboard Phase</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        <script src="https://kit.fontawesome.com/yourcode.js"></script>
         <link rel="stylesheet" href="./css/style.css">
         <link rel="stylesheet" href="./css/fontawesome.css">
         <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
-        <script src="https://kit.fontawesome.com/yourcode.js"></script>
+        
 
     </head>
     <body>
@@ -30,36 +31,81 @@
                         یک شنبه، ۱۲ فروردین
                     </div>
                 </div>
-                <div class="gap"></div>
+                <div class="gapInfo"></div>
                 <div class="userInfo">
                     <img class="userPhoto" src="./images/20200214_115400.jpg" alt="userPhoto">
                     <div class="textInfo">
-                        <p>رضا سمیاری</p>
+                        <p class="userName">رضا سمیاری</p>
                         <div class="userVocation">
                             <p>توسعه دهنده</p>
                             <img  class="miniArrow" src="./images/miniArrow.png" alt="">
                         </div>
                     </div>
                 </div>
-                <div class="gap"></div>
+                <div class="gapDashboard"></div>
                 <div class="dashboardMenu">
                     <div class="lableMenu">
                         <i class="fas fa-desktop"></i>
                         <h2>داشبورد</h2>
                     </div>
-                    <div class="dashboardBox">
+                    <nav class="dashboardBox">
                         <ul>
-                            <li> <a href="#">صندوق پیام</a></li>  
-                            <li><a href="#">تیکت</a></li>   
-                            <li><a href="#">دانشنامه</a></li> 
-                                <ul>
-                                    <li><a href="#">همه دانشنامه ها</a></li>
-                                    <li><a href="#">پیش نویس ها</a></li>
-                                </ul> 
-                            <li><a href="#">اخبار</a></li>  
-                            <li><a href="#">مدیریت</a></li>  
+                            <li> 
+                                <div class="listItem">
+                                    <div class="listItemLable">
+                                        <i class="fas fa-comment-alt"></i>
+                                        <a href="#">صندوق پیام</a>
+                                    </div>
+                                    <div class="colorBoxCounter">۲</div>
+                                </div>
+                            </li>
+                            
+                            <li>
+                                <div  class="listItem">
+                                    <div class="listItemLable">
+                                        <i class="fas fa-ticket-alt"></i>
+                                        <a href="#">تیکت</a>
+                                    </div>
+                                    <div class="colorBoxCounter">۱۸</div>
+                                </div>
+                            </li> 
+                            <li>
+                                <div class="listItem">
+                                    <div class="listItemLable">
+                                        <i class="fas fa-ticket-alt"></i>
+                                        <a href="#">دانشنامه</a>
+                                    </div>
+                                    <img  class="miniArrowBottom" src="./images/miniArrow.png" alt="">
+                                </div>
+                                <ul> 
+                                    <li>
+                                        <a href="#">همه دانشنامه ها</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">پیش نویس ها</a>
+                                    </li>
+                                </ul>
+                            </li> 
+                            <li>
+                                <div class="listItem">
+                                    <div class="listItemLable">
+                                        <i class="fas fa-newspaper"></i>
+                                        <a href="#">اخبار</a>
+                                    </div>
+                                    <img  class="miniArrowBottom" src="./images/miniArrow.png" alt="">
+                                </div>
+                            </li> 
+                            <li>
+                                <div class="listItem">
+                                    <div class="listItemLable">
+                                        <i class="fas fa-ticket-alt"></i>
+                                        <a href="#">مدیریت</a>
+                                    </div>
+                                    <img  class="miniArrow" src="./images/miniArrow.png" alt="">
+                                </div>
+                            </li> 
                         </ul>
-                    </div>
+                    </nav>
                 </div>
             </div>
         </main>
