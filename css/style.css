@@ -24,6 +24,7 @@ body{
     display: flex;
     justify-content: center;
     flex-direction: column;
+    align-items: center;
     padding-top: 65px;
     color: #6256e6;
     font-family: Shabnam;
@@ -59,7 +60,6 @@ body{
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
-    padding-right: 65px;
     align-items: center;
 }
 .userPhoto{
@@ -95,5 +95,34 @@ body{
 .userVocation p{
     font-size: 13px;
 }
+
+.lableMenu {
+    font-size: 14px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+} 
+
+.lableMenu h2{
+    font-size: 14px;
+    padding-right: 20px;
+}
+
+.fas.fa-desktop:before {
+    content: "\f108"; 
+    width: 30px;
+    height: 30px;
+}
+
+.dashboardBox a{
+    text-decoration: none;
+}
+
+ul li ul {
+    visibility: hidden;
+}
+
+
 
 
