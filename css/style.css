@@ -176,6 +176,11 @@ main{
 .fa-comment-alt:before {
     content: "\f27a"; 
 }
+
+.fa-edit:before {
+    content: "\f044";
+    color: white;
+ }
     
 .dashboardBox{
     width: 10vw;
