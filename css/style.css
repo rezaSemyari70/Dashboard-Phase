@@ -261,14 +261,95 @@ ul{
 
 }
 
-.reportUserCount , .ticketCount , .encyclopediaCount , .newsCount{
+.userCount , .ticketCount , .encyclopediaCount , .newsCount{
     width: 270px;
-    height: 90px;
-    background-color: yellowgreen;
-    border-radius: 4px;
+    height: 85px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 5px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
     
 }
 
+.content{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding-right: 15px;
+    color: white;
+    font-size: 12px;
+    color: #020010;
+}
+
+.lable{
+    color: #9d9d9d;
+}
+
+.contentUser{
+    display: flex;
+    flex-direction: row;
+    padding-left: 10px;
+}
+
+.contentUser .lable{
+    font-size: 10px;
+}
+
+.count{
+    font-size: 18px;
+}
+
+.contentUser p{
+    padding-left: 10px;
+}
+
+.lableCount{
+    width: 22%;
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 4px 0px 0px 4px;
+}
+
+.imagLable{
+    width: 35px;
+    height: 25px;
+}
+
+.user{
+    background-image: linear-gradient(#805fe4,#7068e1, #5e72e3);
+}
+
+.ticket{
+    background-image: linear-gradient(#fec63b,#f5b12a, #f19c1b);
+}
+
+.encyclopedia{
+    background-image: linear-gradient(#f3477f,#f0466d, #ed4650); 
+}
+
+.news{
+    background-image: linear-gradient(#21c6f6,#39a8fa, #607dfd); 
+}
+
+.fas{
+    padding-left: 5px;
+}
+
+.fa-arrow-down , .down{
+    color: #13c98e;
+}
+
+.fa-arrow-up , .up{
+    color: #e53935;
+}
+
+.report{
+    color: #6155e5;
+}
 
 
 
