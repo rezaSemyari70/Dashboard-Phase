@@ -426,7 +426,7 @@ ul{
 
 .actsHeader{
     width: 100% - 50px;
-    height: 35px;
+    height: 30px;
     padding : 25px 25px ;
     display: flex;
     flex-direction: row;
@@ -446,7 +446,7 @@ ul{
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: center;
+    justify-content: space-around;
     font-size: 10px;
     font-weight: bold;
     border : 1px solid #c5c9cc ;
@@ -456,6 +456,7 @@ ul{
 
 
 .actMenu{
+    
     display: flex;
     padding-bottom: 0px;
 }
