@@ -440,11 +440,7 @@ ul{
     display: flex;
 }
 
-.messages{
-    width: 38%;
-    min-height: 20vh;
-    background-color: white;
-}
+
 
 .colorBoxGray{
     width: 25px;
@@ -458,6 +454,51 @@ ul{
     font-weight: bold;
 }
 
+.ticketsHeader{
+    width: 65%;
+    height: 30px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 25px 25px 0px 0px;
+}
 
+.startickets{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    border-bottom: 2px solid #6257e4;
+    font-size: 12px;
+    font-weight: bold;
+}
 
+.startickets .colorBoxGray{
+    margin-right: 8px;
+}
 
+.res , .nores , .close {
+    border: none;
+    opacity: 30%;
+}
+
+.messageBox{
+    width: 38%;
+    min-height: 20vh;
+    background-color: white;
+}
+
+.massageHeader{
+    height: 50px;
+    padding: 25px 25px 0px 0px ;
+    font-size: 12px;
+    font-weight: bold;
+    border-bottom: 2px solid #f8f8f8;
+    
+    
+}
+
+.masBox{
+    width: 15%;
+    height: 30px;
+    border-bottom: 2px solid #6257e4;
+}
