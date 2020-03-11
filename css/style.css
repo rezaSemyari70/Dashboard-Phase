@@ -362,7 +362,7 @@ ul{
     color: #6155e5;
 }
 
-.acts{
+.box{
     padding-right: 18px;
     display: flex;
     flex-direction: row;
@@ -373,8 +373,14 @@ ul{
 .note{
     width: 60%;
     height: 350px;
-    background-image: linear-gradient(#8d5fe5,#7b68e5, #7b68e5); 
+    background-image: linear-gradient(135deg, #8d5fe5,#7b68e5, #5e68e4); 
     border-radius: 4px;
+}
+
+.headerNote{
+    display: flex;
+    justify-content: flex-end;
+    padding : 15px 0px 0px 20px ;
 }
 
 .summaryAct{
@@ -383,7 +389,74 @@ ul{
     background-color: white;
 }
 
+.actsHeader{
+    width: 100% - 50px;
+    height: 35px;
+    padding : 25px 25px ;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    
+}
 
+.actsHeader .borderBotton{
+    border-bottom: 2px solid #6256e8;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.summaryMenu{
+    width: 70px;
+    height: 25px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    font-size: 10px;
+    font-weight: bold;
+    border : 1px solid #c5c9cc ;
+    border-radius: 7px;
+    color: #757f88;
+}
+
+
+.actMenu{
+    display: flex;
+    padding-bottom: 0px;
+}
+
+.fa-angle-down{
+    padding : 0px ;
+}
+
+
+.ticketsAndMessage{
+    height: 100% -36px;
+}
+.tickets{
+    width: 60%;
+    min-height: 120px ;
+    background-color: white;
+    display: flex;
+}
+
+.messages{
+    width: 38%;
+    min-height: 20vh;
+    background-color: white;
+}
+
+.colorBoxGray{
+    width: 25px;
+    height: 20px;
+    background-color: #ededed;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 10px;
+    font-weight: bold;
+}
 
 
 
