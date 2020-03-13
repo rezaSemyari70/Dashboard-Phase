@@ -473,6 +473,7 @@ ul{
     justify-content: center;
     font-size: 10px;
     font-weight: bold;
+    margin-right: 10px;
 }
 
 .ticketsHeader{
