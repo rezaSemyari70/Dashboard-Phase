@@ -13,12 +13,18 @@
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css">
         <link rel="stylesheet" href="./css/all.css">
         <script src="https://kit.fontawesome.com/yourcode.js"></script>
+
+        <script src='http://cdnjs.cloudflare.com/ajax/libs/Chart.js/0.2.0/Chart.min.js'></script>
     </head>
     <body>
         <!--[if lt IE 7]>
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
-        
+        <!-- <canvas id="jquery" width="600" height="400"></canvas>
+        <script>
+            var jquery = document.getElementById('jquery').getContext('2d');
+            new Chart(jquery).Line(line);
+        </script> -->
         <main>
             <div class="dashboard shadow">
                 <div class="dateAndTime">
@@ -177,9 +183,10 @@
                             <ul class="actMenu">ماه گذشته</ul>
                             <i class="fas fa-angle-down fa-sm"></i>
                         </div>
-                    </div>    
+                    </div> 
+                      
                     <div class="summaryActContent">
-                        
+                       
                     </div>
                 </div>
             </div>
@@ -203,13 +210,292 @@
                                 <label for="">بسته</label>
                                 <span class="notifGray">۲۸۰</span>
                             </div>
-                    </div> 
-                </div>
+                            <div class="summaryMenu">
+                                <ul class="actMenu">ماه گذشته</ul>
+                                <i class="fas fa-angle-down fa-sm"></i>
+                            </div>
+                        </div> 
+                        <div class="tableTickets">
+                            <table>
+                                <tr class="tableHeader">
+                                    <th class="td-1">عنوان</th>
+                                    <th class="td-2">ایجاد شده توسط</th>
+                                    <th class="td-3">اولویت</th>
+                                    <th class="td-4">آخرین پاسخ دهنده</th>
+                                </tr>
+                                <tr>
+                                    <td class="td-1">
+                                        <img class="rectB" src="./images/rectangle_blue.png" alt="">
+                                        <div class="data">
+                                            <p class="subject">تعویض کارت صدای سیستم</p>
+                                            <div class="category">
+                                            <input type="checkbox">
+                                            <p>عمومی</p>
+                                            <i class="far fa-clipboard fa-xs "></i>
+                                            <p>سند، مدریت، سازمانی</p>
+                                        </div>
+                                        </div>
+                                    </td>
+                                    <td class="td-2">
+                                        <img class="photo" src="./images/20200214_115400.jpg" alt="">
+                                        <div class="intro">
+                                            <p class="name">محمد حسین سعیدی</p>
+                                            <span class="lastSeen">سه روز پیش</span>
+                                        </div>
+                                    </td>
+                                    <td class="td-3">
+                                        <div class="priority">
+                                            <img src="./images/low.png" alt="">
+                                            <span class="level">کم</span>
+                                        </div>
+                                    </td>
+                                    <td class="td-4">
+                                        <img class="photo" src="./images/20200214_115400.jpg" alt="">
+                                        <div class="intro">
+                                            <p class="name">محمد حسین سعیدی </p> </p>
+                                            <span class="lastSeen">سه روز پیش</span>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="td-1">
+                                        <img class="rectB" src="./images/rectangle_green.png" alt="">
+                                        <div class="data">
+                                            <p class="subject">درخواست تلفن برای واحد سرور اتاق طبقه سو... </p>
+                                            <div class="category">
+                                            <input type="checkbox">
+                                            <p>انتقاد و پیشنهاد</p>
+                                            <i class="far fa-clipboard fa-xs "></i>
+                                            <p>سند، مدریت، سازمانی</p>
+                                        </div>
+                                        </div>
+                                    </td>
+                                    <td class="td-2">
+                                        <img class="photo" src="./images/20200214_115400.jpg" alt="">
+                                        <div class="intro">
+                                            <p class="name">محمد حسین سعیدی</p>
+                                            <span class="lastSeen">سه روز پیش</span>
+                                        </div>
+                                    </td>
+                                    <td class="td-3">
+                                        <div class="priority">
+                                            <img src="./images/fast.png" alt="">
+                                            <span class="level">فوری</span>
+                                        </div>
+                                    </td>
+                                    <td class="td-4">
+                                        <img class="photo" src="./images/20200214_115400.jpg" alt="">
+                                        <div class="intro">
+                                            <p class="name">محمد حسین سعیدی </p> </p>
+                                            <span class="lastSeen">سه روز پیش</span>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="td-1">
+                                        <img class="rectB" src="./images/rectangle_blue.png" alt="">
+                                        <div class="data">
+                                            <p class="subject"> عوض کردن هدفون سیستم طبقه دوم</p>
+                                            <div class="category">
+                                            <input type="checkbox">
+                                            <p>عمومی</p>
+                                            <i class="far fa-clipboard fa-xs "></i>
+                                            <p>سند، مدریت، سازمانی</p>
+                                        </div>
+                                        </div>
+                                    </td>
+                                    <td class="td-2">
+                                        <img class="photo" src="./images/20200214_115400.jpg" alt="">
+                                        <div class="intro">
+                                            <p class="name">محمد حسین سعیدی</p>
+                                            <span class="lastSeen">سه روز پیش</span>
+                                        </div>
+                                    </td>
+                                    <td class="td-3">
+                                        <div class="priority">
+                                            <img src="./images/medium.png" alt="">
+                                            <span class="level">متوسط</span>
+                                        </div>
+                                    </td>
+                                    <td class="td-4">
+                                        <img class="photo" src="./images/20200214_115400.jpg" alt="">
+                                        <div class="intro">
+                                            <p class="name">محمد حسین سعیدی </p> </p>
+                                            <span class="lastSeen">سه روز پیش</span>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="td-1">
+                                        <img class="rectB" src="./images/rectangle_gray.png" alt="">
+                                        <div class="data">
+                                            <p class="subject">مشکل در نصب ویندوز و برنامه‌های کاربردی</p>
+                                            <div class="category">
+                                                <input type="checkbox">
+                                                <p>انتقاد و پیشنهاد</p>
+                                                <i class="far fa-clipboard fa-xs"></i>
+                                                <p>سند، مدریت، سازمانی</p>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td class="td-2">
+                                        <img class="photo" src="./images/20200214_115400.jpg" alt="">
+                                        <div class="intro">
+                                            <p class="name">محمد حسین سعیدی</p>
+                                            <span class="lastSeen">سه روز پیش</span>
+                                        </div>
+                                    </td>
+                                    <td class="td-3">
+                                        <div class="priority">
+                                            <img src="./images/low.png" alt="">
+                                            <span class="level">کم</span>
+                                        </div>
+                                    </td>
+                                    <td class="td-4">
+                                        <img class="photo" src="./images/20200214_115400.jpg" alt="">
+                                        <div class="intro">
+                                            <p class="name">محمد حسین سعیدی </p> </p>
+                                            <span class="lastSeen">سه روز پیش</span>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="td-1">
+                                        <img class="rectB" src="./images/rectangle_blue.png" alt="">
+                                        <div class="data">
+                                            <p class="subject">خراب شدن صندلی مربوط به میز</p>
+                                            <div class="category">
+                                            <input type="checkbox">
+                                            <p>عمومی</p>
+                                            <i class="far fa-clipboard fa-xs "></i>
+                                            <p>سند، مدریت، سازمانی</p>
+                                        </div>
+                                        </div>
+                                    </td>
+                                    <td class="td-2">
+                                        <img class="photo" src="./images/20200214_115400.jpg" alt="">
+                                        <div class="intro">
+                                            <p class="name">محمد حسین سعیدی</p>
+                                            <span class="lastSeen">سه روز پیش</span>
+                                        </div>
+                                    </td>
+                                    <td class="td-3">
+                                        <div class="priority">
+                                            <img src="./images/medium.png" alt="">
+                                            <span class="level">متوسط</span>
+                                        </div>
+                                    </td>
+                                    <td class="td-4">
+                                        <img class="photo" src="./images/20200214_115400.jpg" alt="">
+                                        <div class="intro">
+                                            <p class="name">محمد حسین سعیدی </p> </p>
+                                            <span class="lastSeen">سه روز پیش</span>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="td-1">
+                                        <img class="rectB" src="./images/rectangle_green.png" alt="">
+                                        <div class="data">
+                                            <p class="subject">مشکل در نصب ویندوز و برنامه‌های کاربردی</p>
+                                            <div class="category">
+                                            <input type="checkbox">
+                                            <p>عمومی</p>
+                                            <i class="far fa-clipboard fa-xs "></i>
+                                            <p>سند، مدریت، سازمانی</p>
+                                        </div>
+                                        </div>
+                                    </td>
+                                    <td class="td-2">
+                                        <img class="photo" src="./images/20200214_115400.jpg" alt="">
+                                        <div class="intro">
+                                            <p class="name">محمد حسین سعیدی</p>
+                                            <span class="lastSeen">سه روز پیش</span>
+                                        </div>
+                                    </td>
+                                    <td class="td-3">
+                                        <div class="priority">
+                                            <img src="./images/high.png" alt="">
+                                            <span class="level">زیاد</span>
+                                        </div>
+                                    </td>
+                                    <td class="td-4">
+                                        <img class="photo" src="./images/20200214_115400.jpg" alt="">
+                                        <div class="intro">
+                                            <p class="name">محمد حسین سعیدی </p> </p>
+                                            <span class="lastSeen">سه روز پیش</span>
+                                        </div>
+                                    </td>
+                                </tr> 
+                            </table>
+                        </div>
+                    </div>
                 <div class="messageBox shadow">
                     <div class="massageHeader">
                         <div class="masBox">
                             <label for="">صندوق پیام</label>
                         </div>
+                        <div class="summaryMenu">
+                            <ul class="actMenu">ماه گذشته</ul>
+                            <i class="fas fa-angle-down fa-sm"></i>
+                        </div>
+                    </div>
+                    <div class="tableMessage">
+                        <!-- <table> -->
+                        <div class="rowMassBox">
+                            <div class="td1-massBox">
+                                <img class="photoMessage" src="./images/20200214_115400.jpg" alt="">   
+                            </div>
+                            <div class="td2-massBox">
+                                <div class="contentBoxMessage">
+                                    <div class="headMessage">
+                                        <div class="topMessage">
+                                            <p >مصطفی حسینی</p>
+                                            <span class="notifMessage">پیام جدید</span>
+                                        </div>
+                                        <p class="lastSeen-message">۲ ساعت پیش</p>
+                                    </div>
+                                    <p class="subjectMessage">گزارش کارکرد دورهی هفتم آقای حسینی</p>
+                                    <p class="massage">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و متون  بلکه روزنامه است.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="rowMassBox">
+                            <div class="td1-massBox">
+                                <img class="photoMessage" src="./images/20200214_115400.jpg" alt="">   
+                            </div>
+                            <div class="td2-massBox">
+                                <div class="contentBoxMessage">
+                                    <div class="headMessage">
+                                        <div class="topMessage">
+                                            <p >مصطفی حسینی</p>
+                                            <span class="notifMessage">پیام جدید</span>
+                                        </div>
+                                        <p class="lastSeen-message">۲ ساعت پیش</p>
+                                    </div>
+                                    <p class="subjectMessage">گزارش کارکرد دورهی هفتم آقای حسینی</p>
+                                    <p class="massage">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و متون  بلکه روزنامه است.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="rowMassBox">
+                            <div class="td1-massBox">
+                                <img class="photoMessage" src="./images/20200214_115400.jpg" alt="">   
+                            </div>
+                            <div class="td2-massBox">
+                                <div class="contentBoxMessage">
+                                    <div class="headMessage">
+                                        <div class="topMessage">
+                                            <p >مصطفی حسینی</p>
+                                            <span class="notifMessage">پیام جدید</span>
+                                        </div>
+                                        <p class="lastSeen-message">۲ ساعت پیش</p>
+                                    </div>
+                                    <p class="subjectMessage">گزارش کارکرد دورهی هفتم آقای حسینی</p>
+                                    <p class="massage">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و متون  بلکه روزنامه است.</p>
+                                </div>
+                            </div>
+                        </div>   
                     </div>
                 </div>
             </div>
