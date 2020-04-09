@@ -47,6 +47,8 @@ main{
     color: #6256e6;
     font-family: Shabnam;
     font-weight: bold;
+    position: fixed;
+    z-index: 2;
 }
 
 .dateAndTime{
@@ -165,6 +167,12 @@ main{
     
 }
 
+.logoDashboard{
+    width: 55px;
+    height: 55px;
+    padding-bottom: 40px;
+}
+
 .lableMenu {
     width: 100%;
     font-size: 12px;
@@ -206,12 +214,20 @@ main{
 
 .fa-comment-alt:before {
     content: "\f27a"; 
+    padding-left: 20px;
+    
 }
 
 .fa-edit:before {
     content: "\f044";
     color: white;
 
+ }
+
+ .noticeNotif{
+     display: flex;
+     flex-direction: row;
+     align-items: center;
  }
     
 .dashboardBox{
@@ -303,17 +319,88 @@ ul{
 }
 
 .container{
-    width: 84vw;
+    width: 80.2vw;
     height: 100vh;
     display: flex;
     flex-direction: column;
     padding-left: 19px;
     padding-right: 18px;
-    
+    position: relative;
+    right: 15.6vw;
+}
+
+.searchBox{
+    width: 50vw;
+    height: 45px;
+    background-color: #ffffff;
+    position: absolute;
+    z-index: 1;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 35px;
+    display: none;
+}
+
+.searchFix{
+    width: 81vw;
+    height: 45px;
+    background-color: #ffffff;
+    position: absolute;
+    z-index: 1;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 35px;
+    position: fixed;
+}
+
+.fa-search{
+    padding-right: 20px;
+    color: #bebebe;
+    /* transform: rotate(20deg); */
+}
+
+.fa-comment-alt , .fa-bell{
+    color: #bebebe;
+    position: relative;
+}
+
+.notice1{
+    top: 7px;
+    left: 83px;
+    position: absolute;
+    z-index: 6;
+}
+
+.notice2{
+    top: 7px;
+    left: 45px;
+    position: absolute;
+    z-index: 5; 
+}
+
+
+.inputSearch{
+    width: 50%;
+    height: 60%;
+    border: none;
+    background: transparent;
+    padding-right: 8px;
+    font-size: 12px;
+    font-weight: bold;
+    font-family: Shabnam;
+    color: #d1d1d1;
+    opacity: 0.4;
+    display: flex;
+    align-items: center;
 }
 
 .reports{
     width: 100%;
+    z-index: 0;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -333,8 +420,9 @@ ul{
     
 }
 
-.content{
-    height: 81%;
+.content {
+    width: 100%;
+    /* height: 83%; */
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -343,6 +431,7 @@ ul{
     color: white;
     font-size: 12px;
     color: #020010;
+    position: relative;
 }
 
 .lable{
@@ -354,10 +443,11 @@ ul{
 }
 
 .contentUser{
+    width: 80%;
     display: flex;
     flex-direction: row;
     align-items: center;
-    /* padding-left: 5px; */
+    padding-bottom: 5px;
 }
 
 .contentUser .lable{
@@ -390,12 +480,29 @@ ul{
     font-weight: bold;
 }
 
-.lableCount{
+.lableCount {
     width: 23%;
+    height: 100%;
     display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
     align-items: center;
     justify-content: center;
     border-radius: 5px 0px 0px 5px;
+    transition: width 2s;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    /* right: 0px; */
+    transition: width 2s;
+    /* transform: translate(0, 0); */
+}
+
+.lableCount:hover {
+    width: 100%;
+    border-radius: 4px 4px;
 }
 
 .imagLable {
@@ -439,16 +546,19 @@ ul{
 .fa-arrow-down , .down{
     color: #e53935;
     font-size: 14px;
+    padding-left: 5px;
 }
 
 .fa-arrow-up , .up{
     color: #13c98e;
     font-size: 14px;
+    padding-left: 5px;
 }
 
-.report{
+.report {
     color: #6155e5;
     font-size: 14px;
+    padding-left: 5px;
 }
 
 
@@ -458,10 +568,9 @@ ul{
     justify-content: space-between;
 }
 
-.acts{
-    
+.acts {
     width: 100%;
-    height: 44.6vh;
+    height: 50vh;
     margin-bottom: 20px;
 }
 
@@ -487,14 +596,21 @@ ul{
     
 }
 
-.actsHeader{
-    /* width: 100% - 50px; */
+.actsHeader {
+    
     height: 30px;
-    padding : 25px 25px 0px 30px;
+    padding: 25px 25px 0px 30px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    margin-bottom: 15px;
     /* align-items: center; */
+}
+
+.summaryActContent{
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .actsHeader .borderBotton{
@@ -534,6 +650,11 @@ ul{
     
 }
 
+.graph {
+    width: 90%;
+    /* height: 1%; */
+    padding-bottom: 20px;
+}
 
 .ticketsAndMessage{
     width: 100% ;
@@ -557,13 +678,6 @@ table{
     width: 100%;
 }
 
-/* .tableTickets table{
-    width: 100%;
-    border-collapse: collapse;
-    align-items: center;
-    font-family: Shabnam;
-} */
-
 .tableHeader {
     width: 100%;
     height: 30px;
@@ -583,24 +697,6 @@ table{
     font-size: 10px;
 }
 
-.tableHeader:first-child {
-    /* margin-left: 106px; */
-    /* padding-right: 11px; */
-}
-
-.tableHeader th:nth-child(2) {
-    /* padding-left: 25px; */
-}
-
-/* table tr:first-child {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    width: 100%;
-    height: 35px;
-    font-size: 12px;
-} 
-*/
 tr {
     width: 100%;
     height: 30px;
@@ -678,6 +774,11 @@ td:first-child{
     content: "\f328";
     padding-left: 5px;
 }
+
+/* .fa-tag{
+    content: "\f328";
+    padding-left: 5px;
+} */
 
 .iconRotate{
     color: #6355e6;
@@ -918,7 +1019,7 @@ tr .category .checkbox {
 }
 
 .notifMessage {
-    width: 25px;
+    /* width: 25px; */
     height: 12px;
     background-color: #f5375d;
     font-size: 6px;
