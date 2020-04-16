@@ -2,136 +2,141 @@
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
 <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>Dashboard Phase</title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="./css/style.css">
-        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css">
-        <link rel="stylesheet" href="./css/all.css">
-        <script src="https://kit.fontawesome.com/yourcode.js"></script>
+<!--[if gt IE 8]><!-->
+<html class="no-js">
+<!--<![endif]-->
 
-        <script data-cfasync="false" type="text/javascript" src="http://code.jquery.com/jquery.min.js"></script>
-        <script>
-            let $a= $.noConflict(true);
-            $a(window).scroll(function(){
-                if ($a(window).scrollTop() >= 50) {
-                    $a('.searchBox').addClass('searchFix');
-                }
-                else {
-                    $a('.searchBox').removeClass('searchFix');
-                }
-            });
-        </script>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Dashboard Phase</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css">
+    <link rel="stylesheet" href="./css/all.css">
+    <script src="https://kit.fontawesome.com/yourcode.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js"
+        integrity="sha256-R4pqcOYV8lt7snxMQO/HSbVCFRPMdrhAFMH+vr9giYI=" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/743f311229.js" crossorigin="anonymous"></script>
+    <script data-cfasync="false" type="text/javascript" src="http://code.jquery.com/jquery.min.js"></script>
+    <script>
+        let $a = $.noConflict(true);
+        $a(window).scroll(function () {
+            if ($a(window).scrollTop() >= 50) {
+                $a('.searchBox').addClass('searchFix');
+            } else {
+                $a('.searchBox').removeClass('searchFix');
+            }
+        });
+    </script>
+    <script src="./js/graph.js"></script>
+</head>
 
-    </head>
-    <body>
-        <!--[if lt IE 7]>
+<body>
+    <!--[if lt IE 7]>
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
-        <!-- <canvas id="jquery" width="600" height="400"></canvas>
+    <!-- <canvas id="jquery" width="600" height="400"></canvas>
         <script>
             var jquery = document.getElementById('jquery').getContext('2d');
             new Chart(jquery).Line(line);
         </script> -->
-        <main>
-            
-            <div class="dashboard shadow">
-                <div class="dateAndTime">
-                    <div class="time">
-                        <span class="hour">۱۵ </span>
-                        <span class="minute">۲۶ :</span>
-                    </div>
-                    <div class="date">
-                        یکشنبه،۱۲فروردین
-                    </div>
+    <main>
+
+        <div class="dashboard shadow">
+            <div class="dateAndTime">
+                <div class="time">
+                    <span class="hour">۱۵ </span>
+                    <span class="minute">۲۶ :</span>
                 </div>
-                <div class="gapInfo"></div>
-                <div class="userInfo">
-                    <img class="userPhoto" src="./images/20200214_115400.jpg" alt="userPhoto">
-                    <div class="textInfo">
-                        <p class="userName">رضا سمیاری</p>
-                        <div class="userVocation">
-                            <p>توسعه دهنده</p>
-                            <img  class="miniArrow" src="./images/miniArrow.png" alt="">
-                        </div>
-                    </div>
+                <div class="date">
+                    یکشنبه،۱۲فروردین
                 </div>
-                <div class="gapDashboard"></div>
-                <div class="dashboardMenu">
-                    <div class="lableMenu">
-                        <i class="fas fa-desktop"></i>
-                        <h2>داشبورد</h2>
-                    </div>
-                    <nav class="dashboardBox">
-                        <ul>
-                            <li> 
-                                <div class="listItem">
-                                    <div class="listItemLable">
-                                        <i class="fas fa-comment-alt"></i>
-                                        <a href="#">صندوق پیام</a>
-                                    </div>
-                                    <span class="notifRed">۲</span>
-                                </div>
-                            </li>
-                            <li>
-                                <div  class="listItem">
-                                    <div class="listItemLable">
-                                        <i class="fas fa-ticket-alt"></i>
-                                        <a href="#">تیکت</a>
-                                    </div>
-                                    <div class="notifRed">۱۸</div>
-                                </div>
-                            </li> 
-                            <li>
-                                <div class="listItem">
-                                    <div class="listItemLable">
-                                        <i class="fas fa-book"></i>
-                                        <a href="#"></a>دانشنامه </a>
-                                    </div>
-                                    <img  class="miniArrowBottom" src="./images/miniArrow.png" alt="">
-                                </div>
-                                <ul > 
-                                    <li class="subList">
-                                        <a  href="#">همه دانشنامه‌ها</a>
-                                    </li>
-                                    <li class="subList">
-                                        <a  href="#">پیش نویس‌ها</a>
-                                    </li>
-                                </ul>
-                            </li> 
-                            <li>
-                                <div class="listItem">
-                                    <div class="listItemLable">
-                                        <i class="fas fa-newspaper"></i>
-                                        <a href="#">اخبار</a>
-                                    </div>
-                                    <img  class="miniArrowBottom" src="./images/miniArrow.png" alt="">
-                                </div>
-                            </li> 
-                            <li>
-                                <div class="listItem">
-                                    <div class="listItemLable">
-                                        <i class="fas fa-cog"></i>
-                                        <a href="#">مدیریت</a>
-                                    </div>
-                                    <img  class="miniArrow" src="./images/miniArrow.png" alt="">
-                                </div>
-                            </li> 
-                        </ul>
-                    </nav>
-                </div>
-                <img src="./images/Logo.png" class="logoDashboard" alt="">
             </div>
-            
+            <div class="gapInfo"></div>
+            <div class="userInfo">
+                <img class="userPhoto" src="./images/20200214_115400.jpg" alt="userPhoto">
+                <div class="textInfo">
+                    <p class="userName">رضا سمیاری</p>
+                    <div class="userVocation">
+                        <p>توسعه دهنده</p>
+                        <img class="miniArrow" src="./images/miniArrow.png" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="gapDashboard"></div>
+            <div class="dashboardMenu">
+                <div class="lableMenu">
+                    <i class="fas fa-desktop"></i>
+                    <h2>داشبورد</h2>
+                </div>
+                <nav class="dashboardBox">
+                    <ul>
+                        <li>
+                            <div class="listItem">
+                                <div class="listItemLable">
+                                    <i class="fas fa-comment-alt"></i>
+                                    <a href="#">صندوق پیام</a>
+                                </div>
+                                <span class="notifRed">۲</span>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="listItem">
+                                <div class="listItemLable">
+                                    <i class="fas fa-ticket-alt"></i>
+                                    <a href="#">تیکت</a>
+                                </div>
+                                <div class="notifRed">۱۸</div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="listItem">
+                                <div class="listItemLable">
+                                    <i class="fas fa-book"></i>
+                                    <a href="#"></a>دانشنامه </a>
+                                </div>
+                                <img class="miniArrowBottom" src="./images/miniArrow.png" alt="">
+                            </div>
+                            <ul>
+                                <li class="subList">
+                                    <a href="#">همه دانشنامه‌ها</a>
+                                </li>
+                                <li class="subList">
+                                    <a href="#">پیش نویس‌ها</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <div class="listItem">
+                                <div class="listItemLable">
+                                    <i class="fas fa-newspaper"></i>
+                                    <a href="#">اخبار</a>
+                                </div>
+                                <img class="miniArrowBottom" src="./images/miniArrow.png" alt="">
+                            </div>
+                        </li>
+                        <li>
+                            <div class="listItem">
+                                <div class="listItemLable">
+                                    <i class="fas fa-cog"></i>
+                                    <a href="#">مدیریت</a>
+                                </div>
+                                <img class="miniArrow" src="./images/miniArrow.png" alt="">
+                            </div>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+            <img src="./images/Logo.png" class="logoDashboard" alt="">
+        </div>
+
         <div class="container">
             <div class="searchBox shadow">
                 <div class="inputSearch">
                     <i class="fas fa-search fa-lg"></i>
-                    <input class="inputSearch" type="text" placeholder="عبارت مورد نظر خود را جستجو کنید" >
+                    <input class="inputSearch" type="text" placeholder="عبارت مورد نظر خود را جستجو کنید">
                 </div>
                 <div class="noticeNotif">
                     <span class="notifRed notice1">۲</span>
@@ -144,16 +149,16 @@
                 <div class="userCount shadow">
                     <div class="content">
                         <span class="lable" for="">تعداد کل ‌کاربران</label>
-                        <p class="count">۲۳۸</p>
-                        <div class="contentUser">
-                            <span class="report">۱۴۵</span>
-                            <span class="lable" for="">کاربر فعال</span>
-                        </div>
-                        <div class="lableCount user shadow">
-                            <img class="imagLable first" src="./images/users.png" alt="userIcon">
-                        </div>
+                            <p class="count">۲۳۸</p>
+                            <div class="contentUser">
+                                <span class="report">۱۴۵</span>
+                                <span class="lable" for="">کاربر فعال</span>
+                            </div>
+                            <div class="lableCount user shadow">
+                                <img class="imagLable first" src="./images/users.png" alt="userIcon">
+                            </div>
                     </div>
-                    
+
                 </div>
                 <div class="ticketCount shadow">
                     <div class="content">
@@ -167,7 +172,7 @@
                             <img class="imagLable second" src="./images/tickets.png" alt="userIcon">
                         </div>
                     </div>
-                    
+
                 </div>
                 <div class="encyclopediaCount shadow">
                     <div class="content">
@@ -182,7 +187,7 @@
                             <img class="imagLable" src="./images/encyclopedias.png" alt="userIcon">
                         </div>
                     </div>
-                    
+
                 </div>
                 <div class="newsCount shadow">
                     <div class="content">
@@ -197,9 +202,9 @@
                             <img class="imagLable last" src="./images/messages.png" alt="userIcon">
                         </div>
                     </div>
-                    
+
                 </div>
-            </div>  
+            </div>
             <div class="gapContainer"></div>
             <div class="box acts">
                 <div class="note shadow">
@@ -214,252 +219,264 @@
                             <ul class="actMenu">ماه گذشته</ul>
                             <i class="fas fa-angle-down fa-sm"></i>
                         </div>
-                    </div> 
-                      
+                    </div>
+
                     <div class="summaryActContent">
-                        
+
+                        <canvas id="chart"></canvas>
+                        <div class="footerChart">
+                            <span><i class="fas fa-circle fa-xs"></i> خبر</span>
+                            <span><i class="fas fa-circle fa-xs"></i> دانشنامه</span>
+                            <span><i class="fas fa-circle fa-xs"></i> تیکت</span>
+                        </div>
                     </div>
                 </div>
             </div>
             <div class="gapContainer"></div>
-                <div class="box ticketsAndMessage">
-                    <div class="tickets shadow">
-                        <div class="ticketsHeader">
-                            <div class="navHeader">
-                                <div class="startickets">
-                                    <label for="">تیکت‌های ستاره‌دار</label>
-                                    <span class="notifGray">۱۳۰</span>
-                                </div>
-                                <div class="res startickets">
-                                    <label for="">باز (همراه پاسخ)</label>
-                                    <span class="notifGray">۵۲</span>
-                                </div>
-                                <div class="nores startickets">
-                                    <label for="">باز (بدون پاسخ)</label>
-                                    <span class="notifGray">۲۹</span>
-                                </div>
-                                <div class="close startickets">
-                                    <label for="">بسته</label>
-                                    <span class="notifGray">۲۸۰</span>
-                                </div>
+            <div class="box ticketsAndMessage">
+                <div class="tickets shadow">
+                    <div class="ticketsHeader">
+                        <div class="navHeader">
+                            <div class="startickets">
+                                <label for="">تیکت‌های ستاره‌دار</label>
+                                <span class="notifGray">۱۳۰</span>
                             </div>
-                            <div class="summaryMenu">
-                                <ul class="actMenu">ماه گذشته</ul>
-                                <i class="fas fa-angle-down fa-sm"></i>
+                            <div class="res startickets">
+                                <label for="">باز (همراه پاسخ)</label>
+                                <span class="notifGray">۵۲</span>
                             </div>
-                        </div> 
-                        <div class="tableTickets">
-                            <table>
-                                <tr class="tableHeader">
-                                    <th class="th-1">عنوان</th>
-                                    <th class="td-2">ایجاد شده توسط</th>
-                                    <th class="td-3">اولویت</th>
-                                    <th class="td-4">آخرین پاسخ دهنده</th>
-                                </tr>
-                                <tr>
-                                    <td class="td-1">
-                                        <img class="rectB" src="./images/rectangle_blue.png" alt="">
-                                        <div class="data">
-                                            <p class="subject">تعویض کارت صدای سیستم</p>
-                                            <div class="category">
-                                            <input type="checkbox">
-                                            <p>عمومی</p>
-                                            <i class="far fa-clipboard fa-xs  iconRotate"></i>
-                                            <p>سند، مدریت، سازمانی</p>
-                                        </div>
-                                        </div>
-                                    </td>
-                                    <td class="td-2">
-                                        <img class="photo" src="./images/20200214_115400.jpg" alt="">
-                                        <div class="intro">
-                                            <p class="name">حمیدرضا مدنی</p>
-                                            <span class="lastSeen">۳ روز پیش</span>
-                                        </div>
-                                    </td>
-                                    <td class="td-3">
-                                        <div class="priority">
-                                            <img src="./images/low.png" alt="">
-                                            <span class="level">کم</span>
-                                        </div>
-                                    </td>
-                                    <td class="td-4">
-                                        <img class="photo" src="./images/20200214_115400.jpg" alt="">
-                                        <div class="intro">
-                                            <p class="name">حمیدرضا مدنی </p> </p>
-                                            <span class="lastSeen">۳ روز پیش</span>
-                                        </div>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td class="td-1">
-                                        <img class="rectB" src="./images/rectangle_green.png" alt="">
-                                        <div class="data">
-                                            <p class="subject">درخواست تلفن برای واحد سرور اتاق طبقه سو... </p>
-                                            <div class="category">
-                                            <input type="checkbox">
-                                            <p>انتقاد و پیشنهاد</p>
-                                            <i class="far fa-clipboard fa-xs iconRotate"></i>
-                                            <p>سند، مدریت، سازمانی</p>
-                                        </div>
-                                        </div>
-                                    </td>
-                                    <td class="td-2">
-                                        <img class="photo" src="./images/20200214_115400.jpg" alt="">
-                                        <div class="intro">
-                                            <p class="name">محمد‌رضا شیری</p>
-                                            <span class="lastSeen">۳ روز پیش</span>
-                                        </div>
-                                    </td>
-                                    <td class="td-3">
-                                        <div class="priority">
-                                            <img src="./images/fast.png" alt="">
-                                            <span class="level">فوری</span>
-                                        </div>
-                                    </td>
-                                    <td class="td-4">
-                                        <img class="photo" src="./images/20200214_115400.jpg" alt="">
-                                        <div class="intro">
-                                            <p class="name">محمد‌رضا شیری </p> </p>
-                                            <span class="lastSeen">۳ روز پیش</span>
-                                        </div>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td class="td-1">
-                                        <img class="rectB" src="./images/rectangle_blue.png" alt="">
-                                        <div class="data">
-                                            <p class="subject"> عوض کردن هدفون سیستم طبقه دوم</p>
-                                            <div class="category">
-                                            <input type="checkbox">
-                                            <p>عمومی</p>
-                                            
-                                        </div>
-                                        </div>
-                                    </td>
-                                    <td class="td-2">
-                                        <img class="photo" src="./images/20200214_115400.jpg" alt="">
-                                        <div class="intro">
-                                            <p class="name">محمد خدایی</p>
-                                            <span class="lastSeen">۳ روز پیش</span>
-                                        </div>
-                                    </td>
-                                    <td class="td-3">
-                                        <div class="priority">
-                                            <img src="./images/medium.png" alt="">
-                                            <span class="level">متوسط</span>
-                                        </div>
-                                    </td>
-                                    <td class="td-4">
-                                        <img class="photo" src="./images/20200214_115400.jpg" alt="">
-                                        <div class="intro">
-                                            <p class="name">محمد خدایی </p> </p>
-                                            <span class="lastSeen">۳ روز پیش</span>
-                                        </div>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td class="td-1">
-                                        <img class="rectB" src="./images/rectangle_gray.png" alt="">
-                                        <div class="data">
-                                            <p class="subject">مشکل در نصب ویندوز و برنامه‌های کاربردی</p>
-                                            <div class="category">
-                                                <input type="checkbox">
-                                                <p>انتقاد و پیشنهاد</p>
-                                                
-                                            </div>
-                                        </div>
-                                    </td>
-                                    <td class="td-2">
-                                        <img class="photo" src="./images/20200214_115400.jpg" alt="">
-                                        <div class="intro">
-                                            <p class="name">محمد حسین سعیدی</p>
-                                            <span class="lastSeen">۳ روز پیش</span>
-                                        </div>
-                                    </td>
-                                    <td class="td-3">
-                                        <div class="priority">
-                                            <img src="./images/low.png" alt="">
-                                            <span class="level">کم</span>
-                                        </div>
-                                    </td>
-                                    <td class="td-4">
-                                        <img class="photo" src="./images/20200214_115400.jpg" alt="">
-                                        <div class="intro">
-                                            <p class="name">محمد حسین سعیدی </p> </p>
-                                            <span class="lastSeen">۳ روز پیش</span>
-                                        </div>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td class="td-1">
-                                        <img class="rectB" src="./images/rectangle_blue.png" alt="">
-                                        <div class="data">
-                                            <p class="subject">خراب شدن صندلی مربوط به میز</p>
-                                            <div class="category">
-                                            <input type="checkbox">
-                                            <p>عمومی</p>
-                                            <i class="far fa-clipboard fa-xs iconRotate"></i>
-                                            <p>سند، مدریت، سازمانی</p>
-                                        </div>
-                                        </div>
-                                    </td>
-                                    <td class="td-2">
-                                        <img class="photo" src="./images/20200214_115400.jpg" alt="">
-                                        <div class="intro">
-                                            <p class="name">مهران عصاری</p>
-                                            <span class="lastSeen">۳ روز پیش</span>
-                                        </div>
-                                    </td>
-                                    <td class="td-3">
-                                        <div class="priority">
-                                            <img src="./images/medium.png" alt="">
-                                            <span class="level">متوسط</span>
-                                        </div>
-                                    </td>
-                                    <td class="td-4">
-                                        <img class="photo" src="./images/20200214_115400.jpg" alt="">
-                                        <div class="intro">
-                                            <p class="name">مهران عصاری</p> </p>
-                                            <span class="lastSeen">۳ روز پیش</span>
-                                        </div>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td class="td-1">
-                                        <img class="rectB" src="./images/rectangle_green.png" alt="">
-                                        <div class="data">
-                                            <p class="subject">مشکل در نصب ویندوز و برنامه‌های کاربردی</p>
-                                            <div class="category">
-                                            <input type="checkbox">
-                                            <p>عمومی</p>
-                                            
-                                        </div>
-                                        </div>
-                                    </td>
-                                    <td class="td-2">
-                                        <img class="photo" src="./images/20200214_115400.jpg" alt="">
-                                        <div class="intro">
-                                            <p class="name">علیرضا ریاحی</p>
-                                            <span class="lastSeen">۳ روز پیش</span>
-                                        </div>
-                                    </td>
-                                    <td class="td-3">
-                                        <div class="priority">
-                                            <img src="./images/high.png" alt="">
-                                            <span class="level">زیاد</span>
-                                        </div>
-                                    </td>
-                                    <td class="td-4">
-                                        <img class="photo" src="./images/20200214_115400.jpg" alt="">
-                                        <div class="intro">
-                                            <p class="name">علیرضا ریاحی</p> </p>
-                                            <span class="lastSeen">۳ روز پیش</span>
-                                        </div>
-                                    </td>
-                                </tr> 
-                            </table>
+                            <div class="nores startickets">
+                                <label for="">باز (بدون پاسخ)</label>
+                                <span class="notifGray">۲۹</span>
+                            </div>
+                            <div class="close startickets">
+                                <label for="">بسته</label>
+                                <span class="notifGray">۲۸۰</span>
+                            </div>
+                        </div>
+                        <div class="summaryMenu">
+                            <ul class="actMenu">ماه گذشته</ul>
+                            <i class="fas fa-angle-down fa-sm"></i>
                         </div>
                     </div>
+                    <div class="tableTickets">
+                        <table>
+                            <tr class="tableHeader">
+                                <th class="th-1">عنوان</th>
+                                <th class="td-2">ایجاد شده توسط</th>
+                                <th class="td-3">اولویت</th>
+                                <th class="td-4">آخرین پاسخ دهنده</th>
+                            </tr>
+                            <tr>
+                                <td class="td-1">
+                                    <img class="rectB" src="./images/rectangle_blue.png" alt="">
+                                    <div class="data">
+                                        <p class="subject">تعویض کارت صدای سیستم</p>
+                                        <div class="category">
+                                            <input type="checkbox">
+                                            <p>عمومی</p>
+                                            <i class="fas fa-tag fa-xs  iconRotate"></i>
+                                            <p>سند، مدریت، سازمانی</p>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td class="td-2">
+                                    <img class="photo" src="./images/20200214_115400.jpg" alt="">
+                                    <div class="intro">
+                                        <p class="name">حمیدرضا مدنی</p>
+                                        <span class="lastSeen">۳ روز پیش</span>
+                                    </div>
+                                </td>
+                                <td class="td-3">
+                                    <div class="priority">
+                                        <img src="./images/low.png" alt="">
+                                        <span class="level">کم</span>
+                                    </div>
+                                </td>
+                                <td class="td-4">
+                                    <img class="photo" src="./images/20200214_115400.jpg" alt="">
+                                    <div class="intro">
+                                        <p class="name">حمیدرضا مدنی </p>
+                                        </p>
+                                        <span class="lastSeen">۳ روز پیش</span>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="td-1">
+                                    <img class="rectB" src="./images/rectangle_green.png" alt="">
+                                    <div class="data">
+                                        <p class="subject">درخواست تلفن برای واحد سرور اتاق طبقه سو... </p>
+                                        <div class="category">
+                                            <input type="checkbox">
+                                            <p>انتقاد و پیشنهاد</p>
+                                            <i class="fas fa-tag fa-xs  iconRotate"></i>
+                                            <p>سند، مدریت، سازمانی</p>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td class="td-2">
+                                    <img class="photo" src="./images/20200214_115400.jpg" alt="">
+                                    <div class="intro">
+                                        <p class="name">محمد‌رضا شیری</p>
+                                        <span class="lastSeen">۳ روز پیش</span>
+                                    </div>
+                                </td>
+                                <td class="td-3">
+                                    <div class="priority">
+                                        <img src="./images/fast.png" alt="">
+                                        <span class="level">فوری</span>
+                                    </div>
+                                </td>
+                                <td class="td-4">
+                                    <img class="photo" src="./images/20200214_115400.jpg" alt="">
+                                    <div class="intro">
+                                        <p class="name">محمد‌رضا شیری </p>
+                                        </p>
+                                        <span class="lastSeen">۳ روز پیش</span>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="td-1">
+                                    <img class="rectB" src="./images/rectangle_blue.png" alt="">
+                                    <div class="data">
+                                        <p class="subject"> عوض کردن هدفون سیستم طبقه دوم</p>
+                                        <div class="category">
+                                            <input type="checkbox">
+                                            <p>عمومی</p>
+
+                                        </div>
+                                    </div>
+                                </td>
+                                <td class="td-2">
+                                    <img class="photo" src="./images/20200214_115400.jpg" alt="">
+                                    <div class="intro">
+                                        <p class="name">محمد خدایی</p>
+                                        <span class="lastSeen">۳ روز پیش</span>
+                                    </div>
+                                </td>
+                                <td class="td-3">
+                                    <div class="priority">
+                                        <img src="./images/medium.png" alt="">
+                                        <span class="level">متوسط</span>
+                                    </div>
+                                </td>
+                                <td class="td-4">
+                                    <img class="photo" src="./images/20200214_115400.jpg" alt="">
+                                    <div class="intro">
+                                        <p class="name">محمد خدایی </p>
+                                        </p>
+                                        <span class="lastSeen">۳ روز پیش</span>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="td-1">
+                                    <img class="rectB" src="./images/rectangle_gray.png" alt="">
+                                    <div class="data">
+                                        <p class="subject">مشکل در نصب ویندوز و برنامه‌های کاربردی</p>
+                                        <div class="category">
+                                            <input type="checkbox">
+                                            <p>انتقاد و پیشنهاد</p>
+
+                                        </div>
+                                    </div>
+                                </td>
+                                <td class="td-2">
+                                    <img class="photo" src="./images/20200214_115400.jpg" alt="">
+                                    <div class="intro">
+                                        <p class="name">محمد حسین سعیدی</p>
+                                        <span class="lastSeen">۳ روز پیش</span>
+                                    </div>
+                                </td>
+                                <td class="td-3">
+                                    <div class="priority">
+                                        <img src="./images/low.png" alt="">
+                                        <span class="level">کم</span>
+                                    </div>
+                                </td>
+                                <td class="td-4">
+                                    <img class="photo" src="./images/20200214_115400.jpg" alt="">
+                                    <div class="intro">
+                                        <p class="name">محمد حسین سعیدی </p>
+                                        </p>
+                                        <span class="lastSeen">۳ روز پیش</span>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="td-1">
+                                    <img class="rectB" src="./images/rectangle_blue.png" alt="">
+                                    <div class="data">
+                                        <p class="subject">خراب شدن صندلی مربوط به میز</p>
+                                        <div class="category">
+                                            <input type="checkbox">
+                                            <p>عمومی</p>
+                                            <i class="fas fa-tag fa-xs  iconRotate"></i>
+                                            <p>سند، مدریت، سازمانی</p>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td class="td-2">
+                                    <img class="photo" src="./images/20200214_115400.jpg" alt="">
+                                    <div class="intro">
+                                        <p class="name">مهران عصاری</p>
+                                        <span class="lastSeen">۳ روز پیش</span>
+                                    </div>
+                                </td>
+                                <td class="td-3">
+                                    <div class="priority">
+                                        <img src="./images/medium.png" alt="">
+                                        <span class="level">متوسط</span>
+                                    </div>
+                                </td>
+                                <td class="td-4">
+                                    <img class="photo" src="./images/20200214_115400.jpg" alt="">
+                                    <div class="intro">
+                                        <p class="name">مهران عصاری</p>
+                                        </p>
+                                        <span class="lastSeen">۳ روز پیش</span>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="td-1">
+                                    <img class="rectB" src="./images/rectangle_green.png" alt="">
+                                    <div class="data">
+                                        <p class="subject">مشکل در نصب ویندوز و برنامه‌های کاربردی</p>
+                                        <div class="category">
+                                            <input type="checkbox">
+                                            <p>عمومی</p>
+
+                                        </div>
+                                    </div>
+                                </td>
+                                <td class="td-2">
+                                    <img class="photo" src="./images/20200214_115400.jpg" alt="">
+                                    <div class="intro">
+                                        <p class="name">علیرضا ریاحی</p>
+                                        <span class="lastSeen">۳ روز پیش</span>
+                                    </div>
+                                </td>
+                                <td class="td-3">
+                                    <div class="priority">
+                                        <img src="./images/high.png" alt="">
+                                        <span class="level">زیاد</span>
+                                    </div>
+                                </td>
+                                <td class="td-4">
+                                    <img class="photo" src="./images/20200214_115400.jpg" alt="">
+                                    <div class="intro">
+                                        <p class="name">علیرضا ریاحی</p>
+                                        </p>
+                                        <span class="lastSeen">۳ روز پیش</span>
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
                 <div class="messageBox shadow">
                     <div class="massageHeader">
                         <div class="masBox">
@@ -474,58 +491,61 @@
                         <!-- <table> -->
                         <div class="rowMassBox">
                             <div class="td1-massBox">
-                                <img class="photoMessage" src="./images/20200214_115400.jpg" alt="">   
+                                <img class="photoMessage" src="./images/20200214_115400.jpg" alt="">
                             </div>
                             <div class="td2-massBox">
                                 <div class="contentBoxMessage">
                                     <div class="headMessage">
                                         <div class="topMessage">
-                                            <p >مصطفی حسینی</p>
+                                            <p>مصطفی حسینی</p>
                                             <span class="notifMessage">پیام جدید</span>
                                         </div>
                                         <p class="lastSeen-message">۲ ساعت پیش</p>
                                     </div>
                                     <p class="subjectMessage">گزارش کارکرد دورهی هفتم آقای حسینی</p>
-                                    <p class="massage">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و متون  بلکه روزنامه است.</p>
+                                    <p class="massage">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با
+                                        استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه است.</p>
                                 </div>
                             </div>
                         </div>
                         <div class="rowMassBox">
                             <div class="td1-massBox">
-                                <img class="photoMessage" src="./images/20200214_115400.jpg" alt="">   
+                                <img class="photoMessage" src="./images/20200214_115400.jpg" alt="">
                             </div>
                             <div class="td2-massBox">
                                 <div class="contentBoxMessage">
                                     <div class="headMessage">
                                         <div class="topMessage">
-                                            <p >محمد‌حسین ‌سعیدی</p>
+                                            <p>محمد‌حسین ‌سعیدی</p>
                                             <span class="notifMessage">پیام جدید</span>
                                         </div>
                                         <p class="lastSeen-message">۲ ساعت پیش</p>
                                     </div>
                                     <p class="subjectMessage">گزارش کارکرد دورهی هفتم آقای حسینی</p>
-                                    <p class="massage">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و متون  بلکه روزنامه است.</p>
+                                    <p class="massage">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با
+                                        استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه است.</p>
                                 </div>
                             </div>
                         </div>
                         <div class="rowMassBox">
                             <div class="td1-massBox">
-                                <img class="photoMessage" src="./images/20200214_115400.jpg" alt="">   
+                                <img class="photoMessage" src="./images/20200214_115400.jpg" alt="">
                             </div>
                             <div class="td2-massBox">
                                 <div class="contentBoxMessage">
                                     <div class="headMessage">
                                         <div class="topMessage">
-                                            <p >معین قاسمی</p>
+                                            <p>معین قاسمی</p>
                                             <!-- <span class="notifMessage">پیام جدید</span> -->
                                         </div>
                                         <p class="lastSeen-message">۲ ساعت پیش</p>
                                     </div>
                                     <p class="subjectMessage">گزارش کارکرد دورهی هفتم آقای حسینی</p>
-                                    <p class="massage">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و متون  بلکه روزنامه است.</p>
+                                    <p class="massage">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با
+                                        استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه است.</p>
                                 </div>
                             </div>
-                        </div>   
+                        </div>
                     </div>
                 </div>
             </div>
@@ -534,10 +554,10 @@
                     <div class="massageHeader noBorder">
                         <div class="itemHeader">
                             <div class="masBox">
-                                <label for="">خبرهای ستاره‌دار</label>                                                      
+                                <label for="">خبرهای ستاره‌دار</label>
                             </div>
-                            <label for="">بدون ستاره</label> 
-                        </div> 
+                            <label for="">بدون ستاره</label>
+                        </div>
                         <div class="summaryMenu">
                             <ul class="actMenu">ماه گذشته</ul>
                             <i class="fas fa-angle-down fa-sm"></i>
@@ -546,7 +566,9 @@
                     <div class="contentStars">
                         <table>
                             <tr class="tableHeader ">
-                                <th class="th-col-1 "><p class="dataStars">عنوان</p></th>
+                                <th class="th-col-1 ">
+                                    <p class="dataStars">عنوان</p>
+                                </th>
                                 <th class="th-col-2">ایجاد شده توسط</th>
                                 <th class="th-col-3">سامانه</th>
                             </tr>
@@ -556,7 +578,7 @@
                                     <div class="dataStars">
                                         <p class="subject">کلمات،تعاریف و قوانین اصلی دپارتمان سرور...</p>
                                         <div class="category">
-                                            <i class="far fa-clipboard fa-xs iconRotate"></i>
+                                            <i class="fas fa-tag fa-xs  iconRotate"></i>
                                             <p>سند، مدریت، سازمانی</p>
                                         </div>
                                     </div>
@@ -569,7 +591,8 @@
                                 </td>
                                 <td class="col-3">
                                     <div class="intro">
-                                        <p class="name">عمومی</p> </p>
+                                        <p class="name">عمومی</p>
+                                        </p>
                                     </div>
                                 </td>
                             </tr>
@@ -578,7 +601,7 @@
                                     <!-- <img class="rectB" src="./images/rectangle_blue.png" alt=""> -->
                                     <div class="dataStars">
                                         <p class="subject">اخلاق حرفه‌ای عمومی در شرکت</p>
-                                        <div class="category">   
+                                        <div class="category">
                                         </div>
                                     </div>
                                 </td>
@@ -590,7 +613,8 @@
                                 </td>
                                 <td class="col-3">
                                     <div class="intro">
-                                        <p class="name">ارائه فنی...</p> </p>
+                                        <p class="name">ارائه فنی...</p>
+                                        </p>
                                     </div>
                                 </td>
                             </tr>
@@ -600,7 +624,7 @@
                                     <div class="dataStars">
                                         <p class="subject">راهنمای استفاده از پراکسی</p>
                                         <div class="category">
-                                        
+
                                         </div>
                                     </div>
                                 </td>
@@ -612,7 +636,8 @@
                                 </td>
                                 <td class="col-3">
                                     <div class="intro">
-                                        <p class="name">متوسط</p> </p>
+                                        <p class="name">متوسط</p>
+                                        </p>
                                     </div>
                                 </td>
                             </tr>
@@ -622,7 +647,7 @@
                                     <div class="dataStars">
                                         <p class="subject">پیاده‌سازی یک بلاکچین ساده </p>
                                         <div class="category">
-                                        
+
                                         </div>
                                     </div>
                                 </td>
@@ -634,7 +659,8 @@
                                 </td>
                                 <td class="col-3">
                                     <div class="intro">
-                                        <p class="name">ارائه فنی...</p> </p>
+                                        <p class="name">ارائه فنی...</p>
+                                        </p>
                                     </div>
                                 </td>
                             </tr>
@@ -644,10 +670,10 @@
                                     <div class="dataStars">
                                         <p class="subject">معرفی jupyter NoteBook</p>
                                         <div class="category">
-                                        
-                                        <i class="far fa-clipboard fa-xs iconRotate"></i>
-                                        <p>سند، مدریت، سازمانی</p>
-                                    </div>
+
+                                            <i class="fas fa-tag fa-xs  iconRotate"></i>
+                                            <p>سند، مدریت، سازمانی</p>
+                                        </div>
                                     </div>
                                 </td>
                                 <td class="col-2">
@@ -658,7 +684,8 @@
                                 </td>
                                 <td class="col-3">
                                     <div class="intro">
-                                        <p class="name">متوسط</p> </p>
+                                        <p class="name">متوسط</p>
+                                        </p>
                                     </div>
                                 </td>
                             </tr>
@@ -668,7 +695,7 @@
                                     <div class="dataStars">
                                         <p class="subject">Saving The Planet</p>
                                         <div class="category">
-                                        
+
                                         </div>
                                     </div>
                                 </td>
@@ -680,7 +707,8 @@
                                 </td>
                                 <td class="col-3">
                                     <div class="intro">
-                                        <p class="name">عمومی</p> </p>
+                                        <p class="name">عمومی</p>
+                                        </p>
                                     </div>
                                 </td>
                             </tr>
@@ -691,18 +719,21 @@
                     <div class="massageHeader noBorder">
                         <div class="itemHeader">
                             <div class="masBox">
-                                <label for="">خبرهای ستاره‌دار</label>                                                      
+                                <label for="">خبرهای ستاره‌دار</label>
                             </div>
-                            <label for="">بدون ستاره</label> 
-                        </div> 
+                            <label for="">بدون ستاره</label>
+                        </div>
                         <div class="summaryMenu">
                             <ul class="actMenu">ماه گذشته</ul>
                             <i class="fas fa-angle-down fa-sm"></i>
                         </div>
-                    </div><div class="contentStars">
+                    </div>
+                    <div class="contentStars">
                         <table>
                             <tr class="tableHeader ">
-                                <th class="th-col-1 "><p class="dataStars">عنوان</p></th>
+                                <th class="th-col-1 ">
+                                    <p class="dataStars">عنوان</p>
+                                </th>
                                 <th class="th-col-2">ایجاد شده توسط</th>
                                 <th class="th-col-3">سامانه</th>
                             </tr>
@@ -712,7 +743,7 @@
                                     <div class="dataStars">
                                         <p class="subject">فیلم کلاس برنامه نویسی امن در وب</p>
                                         <div class="category">
-                                            <i class="far fa-clipboard fa-xs iconRotate"></i>
+                                            <i class="fas fa-tag fa-xs  iconRotate"></i>
                                             <p>سند، مدریت، سازمانی</p>
                                         </div>
                                     </div>
@@ -725,7 +756,8 @@
                                 </td>
                                 <td class="col-3">
                                     <div class="intro">
-                                        <p class="name">عمومی</p> </p>
+                                        <p class="name">عمومی</p>
+                                        </p>
                                     </div>
                                 </td>
                             </tr>
@@ -734,7 +766,7 @@
                                     <!-- <img class="rectB" src="./images/rectangle_blue.png" alt=""> -->
                                     <div class="dataStars">
                                         <p class="subject">راهنما و دانشنامه استفاده از سامانه</p>
-                                        <div class="category">   
+                                        <div class="category">
                                         </div>
                                     </div>
                                 </td>
@@ -746,7 +778,8 @@
                                 </td>
                                 <td class="col-3">
                                     <div class="intro">
-                                        <p class="name">ارائه فنی...</p> </p>
+                                        <p class="name">ارائه فنی...</p>
+                                        </p>
                                     </div>
                                 </td>
                             </tr>
@@ -756,7 +789,7 @@
                                     <div class="dataStars">
                                         <p class="subject">سفر اربعین</p>
                                         <div class="category">
-                                        
+
                                         </div>
                                     </div>
                                 </td>
@@ -768,7 +801,8 @@
                                 </td>
                                 <td class="col-3">
                                     <div class="intro">
-                                        <p class="name">متوسط</p> </p>
+                                        <p class="name">متوسط</p>
+                                        </p>
                                     </div>
                                 </td>
                             </tr>
@@ -778,7 +812,7 @@
                                     <div class="dataStars">
                                         <p class="subject">پیاده سازی یک بلاکچین ساده</p>
                                         <div class="category">
-                                        
+
                                         </div>
                                     </div>
                                 </td>
@@ -790,7 +824,8 @@
                                 </td>
                                 <td class="col-3">
                                     <div class="intro">
-                                        <p class="name">ارائه فنی...</p> </p>
+                                        <p class="name">ارائه فنی...</p>
+                                        </p>
                                     </div>
                                 </td>
                             </tr>
@@ -800,10 +835,10 @@
                                     <div class="dataStars">
                                         <p class="subject">معرفی jupyter NoteBook</p>
                                         <div class="category">
-                                        
-                                        <i class="far fa-clipboard fa-xs iconRotate"></i>
-                                        <p>سند، مدریت، سازمانی</p>
-                                    </div>
+
+                                            <i class="fas fa-tag fa-xs  iconRotate"></i>
+                                            <p>سند، مدریت، سازمانی</p>
+                                        </div>
                                     </div>
                                 </td>
                                 <td class="col-2">
@@ -814,7 +849,8 @@
                                 </td>
                                 <td class="col-3">
                                     <div class="intro">
-                                        <p class="name">متوسط</p> </p>
+                                        <p class="name">متوسط</p>
+                                        </p>
                                     </div>
                                 </td>
                             </tr>
@@ -824,7 +860,7 @@
                                     <div class="dataStars">
                                         <p class="subject">راه‌اندازی سامانه تعاملی داخلی دپارتمان سرور...</p>
                                         <div class="category">
-                                        
+
                                         </div>
                                     </div>
                                 </td>
@@ -836,7 +872,8 @@
                                 </td>
                                 <td class="col-3">
                                     <div class="intro">
-                                        <p class="name">عمومی</p> </p>
+                                        <p class="name">عمومی</p>
+                                        </p>
                                     </div>
                                 </td>
                             </tr>
@@ -845,6 +882,9 @@
                 </div>
             </div>
         </div>
-        </main>
-    </body>
+    </main>
+    <script src="node_modules/chart.js/dist/Chart.bundle.min.js"></script>
+    <script src="./js/graph.js"></script>
+</body>
+
 </html>
